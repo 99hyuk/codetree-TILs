@@ -6,11 +6,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int cnt=0;
+        int div = n;
 
         for(int i=1; i<n; i++){
-            n /= i;
+            div /= i;
             cnt++;
-            if(n <= 1){
+            if(div <= 1){
                 System.out.println(cnt);
                 break;
             }
