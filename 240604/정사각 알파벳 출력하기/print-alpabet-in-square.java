@@ -10,7 +10,7 @@ public class Main {
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
                 System.out.print(alp);
-                int k = (int)alp++;
+                int k = (int)++alp;
                 alp = (char)k;
             }
             System.out.println();
