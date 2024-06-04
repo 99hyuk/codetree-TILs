@@ -10,10 +10,10 @@ public class Main {
         for(int i=1; i<=n; i++){
             for(int j=1; j<=i; j++){
                 System.out.print(cnt);
+                cnt++;
                 if(cnt == 'Z' + 1){
                     cnt = 'A';
                 }
-                cnt++;
             }
             System.out.println();
         }
