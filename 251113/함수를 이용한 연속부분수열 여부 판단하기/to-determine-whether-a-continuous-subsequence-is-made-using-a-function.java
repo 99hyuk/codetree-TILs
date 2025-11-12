@@ -17,13 +17,16 @@ public class Main {
 
     static boolean part(int[] a, int[] b) {
         if (a.length < b.length) return false;
+        boolean check = false;
         for (int i=0; i<a.length-b.length+1; i++) {
             for (int j=0; j<b.length; j++) {
                 if (a[i+j] != b[j]) {
-                    continue;
+                    check = false;
+                    break;
                 }
-                return true;
+                check = true;
             }
+            if (check) return true;
         }
         return false;
     }
