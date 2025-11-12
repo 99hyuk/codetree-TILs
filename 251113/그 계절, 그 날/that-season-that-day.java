@@ -9,12 +9,12 @@ public class Main {
         if (isDay(m, d, isP(y))) {
             if (m <=2 || m>=12) {
                 System.out.print("Winter");
-            } else if (m<=11) {
-                System.out.print("Fall");
-            } else if (m<=8){
-                System.out.print("Summer");
             } else if (m<=5) {
                 System.out.print("Spring");
+            } else if (m<=8){
+                System.out.print("Summer");
+            } else if (m<=11) {
+                System.out.print("Fall");
             }
         } else {
             System.out.print(-1);
