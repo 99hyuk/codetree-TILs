@@ -44,10 +44,12 @@ class Distance implements Comparable<Distance>{
         int sum1 = x+y;
         int sum2 = distance.x + distance.y;
 
-        if (sum1 == sum2) {
-            return num - distance.num;
-        } else {
+        if (sum1 > sum2) {
             return sum1 - sum2;
-        } 
+        } else if (sum1 < sum2) {
+            return sum1 - sum2;
+        } else {
+            return num - distance.num;
+        }
     }
 }
