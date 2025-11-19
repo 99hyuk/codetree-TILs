@@ -14,7 +14,7 @@ public class Main {
         }
 
         int cnt = 0;
-        int[] Barr = new int[9];
+        int[] Barr = new int[20];
         while (num / B > 0) {
             Barr[cnt] = num % B;
             num /= B;
