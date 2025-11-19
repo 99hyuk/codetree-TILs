@@ -15,6 +15,10 @@ public class Main {
 
         int cnt = 0;
         for (int i=0; i<n; i++) {
+            if (words[i].length() < t.length()) {
+                continue;
+            }
+
             if (words[i].substring(0,t.length()).equals(t)) {
                 cnt++;
             }
