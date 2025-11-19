@@ -42,8 +42,8 @@ public class Main {
                 }
 
                 if (!check) {
-                    minX = 0;
-                    minY = 0;
+                    minX = 1;
+                    minY = 1;
                 }
             }
         }
