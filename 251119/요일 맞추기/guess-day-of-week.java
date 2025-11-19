@@ -11,7 +11,7 @@ public class Main {
         String[] day = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         int countDay = 0;
-        if (m1 <= m2 && d1 <= d2) {
+        if ((m1 < m2) || (m1 == m2 && d1 <= d2)) {
             while(true) {
                 if(m1 == m2 && d1 == d2) {
                     break;
