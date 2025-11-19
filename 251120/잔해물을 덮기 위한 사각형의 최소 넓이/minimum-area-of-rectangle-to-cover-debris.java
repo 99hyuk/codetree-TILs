@@ -39,15 +39,13 @@ public class Main {
                     maxY = Math.max(maxY, j);
                     minY = Math.min(minY, j);
                     check = true;
-                }
-
-                if (!check) {
-                    minX = 1;
-                    minY = 1;
-                }
+                }  
             }
         }
-
+        if (!check) {
+            minX = 1;
+            minY = 1;
+        }
         System.out.print((maxX-minX+1) * (maxY-minY+1));
     }
 }
