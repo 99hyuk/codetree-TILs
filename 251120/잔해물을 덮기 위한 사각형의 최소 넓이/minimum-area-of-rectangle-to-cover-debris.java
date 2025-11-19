@@ -30,6 +30,7 @@ public class Main {
         int minX = rect1_x2;
         int maxY = 0;
         int minY = rect1_y2;
+        boolean check = false;
         for(int i=rect1_x1; i<rect1_x2; i++) {
             for(int j=rect1_y1; j<rect1_y2; j++) {
                 if (arr[i][j] > 0) {
@@ -37,6 +38,12 @@ public class Main {
                     minX = Math.min(minX, i);
                     maxY = Math.max(maxY, j);
                     minY = Math.min(minY, j);
+                    check = true;
+                }
+
+                if (!check) {
+                    minX = 0;
+                    minY = 0;
                 }
             }
         }
