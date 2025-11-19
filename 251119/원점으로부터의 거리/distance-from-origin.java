@@ -37,7 +37,7 @@ class Distance implements Comparable<Distance>{
     @Override
     public int compareTo(Distance distance) {
         if(x < 0) x = -x;
-        if(y < 0) x = -y;
+        if(y < 0) y = -y;
         if(distance.x < 0) distance.x = -distance.x;
         if(distance.y < 0) distance.y = -distance.y;
 
