@@ -14,14 +14,12 @@ public class Main {
         int cnt = 0;
         int max = 0;
         for (int i=0; i<n; i++) {
+            cnt++;
             if (i==n-1 || arr[i] != arr[i+1]) {
                 max = Math.max(cnt, max);
                 cnt = 0;
             }
-            cnt++;
         }
-
-        if (n==1) {max = 1;}
         System.out.print(max);
     }
 }
