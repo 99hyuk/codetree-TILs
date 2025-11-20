@@ -22,7 +22,7 @@ public class Main {
             B[i] = new Move(time, dir);
         }
 
-        int[] posA = new int[1000];
+        int[] posA = new int[1000000];
         int cntA = 0;
         for (int i=0; i<n; i++) {
             for (int j=0; j<A[i].time; j++) {
@@ -34,7 +34,7 @@ public class Main {
             }
         }
 
-        int[] posB = new int[1000];
+        int[] posB = new int[1000000];
         int cntB = 0;
         for (int i=0; i<m; i++) {
             for (int j=0; j<B[i].time; j++) {
