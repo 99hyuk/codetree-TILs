@@ -49,7 +49,7 @@ public class Main {
         int ap = 0;
         int bp = 0;
         boolean check = false;
-        for (int t=0; t<=1000; t++) {
+        for (int t=0; t<1000; t++) {
             ap += posA[t];
             bp += posB[t];
             if (ap == bp) {
