@@ -20,6 +20,8 @@ public class Main {
             }
             cnt++;
         }
+
+        if (n==1) {max = 1};
         System.out.print(max);
     }
 }
