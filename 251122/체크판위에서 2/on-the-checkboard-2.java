@@ -12,16 +12,25 @@ public class Main {
         }
         // Please write your code here.
         int count = 0;
+        boolean isTrue = true;
         char start = grid[0][0];
-        char point;
-        for (int i=1; i<R-2; i++) {
-            for (int j=1; j<C-2; j++) {
+        for (int i=1; i<R; i++) {
+            for (int j=1; j<C; j++) {
                 if (grid[i][j] != start) {
-                    point = grid[i][j];
-                    for (int k=i+1; k<R-1; k++) {
-                        for (int p=j+1; p<C-1; p++) {
-                            if (grid[k][p] != point) {
-                                count++;
+                    char point1 = grid[i][j];
+                    for (int k=i+1; k<R; k++) {
+                        for (int p=j+1; p<C; p++) {
+                            if (grid[k][p] != point1) {
+                                char point2 = grid[k][p];
+                                for (int z=k+1; z<R; z++) {
+                                    for (int x=p+1; x<C; x++) {
+                                        if (grid[z][x] != point2) {
+                                            if (z == R-1 && x == C-1){
+                                                count++;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     } 
