@@ -27,7 +27,7 @@ public class Main {
             return memo[n];
         }
 
-        return memo[n] = recur(n-2) + recur(n-3);
+        return memo[n] = (recur(n-2) + recur(n-3)) % 10007;
     }
     
 }
