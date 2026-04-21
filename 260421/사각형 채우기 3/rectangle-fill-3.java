@@ -5,7 +5,7 @@ public class Main {
         int n = sc.nextInt();
         // Please write your code here.
 
-        int[] dp = new int[1001];
+        long[] dp = new long[1001];
         dp[0] = 1;
         dp[1] = 2;
         dp[2] = 7;
