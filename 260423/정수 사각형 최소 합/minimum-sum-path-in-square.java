@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.io.*;
 public class Main {
     static class Point implements Comparable<Point> {
         int r,c,t;
@@ -15,14 +15,14 @@ public class Main {
     static int dr[] = {1,0};
     static int dc[] = {0,-1};
     static int N, map[][];
-    public static void main(String[] args) {
-        // Please write your code here.
-        Scanner sc = new Scanner(System.in);
-        N = sc.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        N = Integer.parseInt(br.readLine());
         map = new int[N][N];
         for (int i=0; i<N; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j=0; j<N; j++) {
-                map[i][j] = sc.nextInt();
+                map[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
