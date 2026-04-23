@@ -9,7 +9,7 @@ public class Main {
             this.t = t;
         }
         public int compareTo(Point o) {
-            return o.t - this.t;
+            return this.t-o.t;
         }
     }
     static int dr[] = {1,0};
