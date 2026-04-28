@@ -6,10 +6,11 @@ public class Main {
     static int[] dc = {0,0,-1,1};
     static int[][] memo;
     static int[][] grid;
+    static int n;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        n = sc.nextInt();
         grid = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -21,7 +22,7 @@ public class Main {
         memo = new int[n][n];
         for (int i=0; i<n; i++) {
             for (int j=0; j<n; j++) {
-                dp[i][j] = 1;
+                memo[i][j] = 1;
             }
         }
 
@@ -34,14 +35,16 @@ public class Main {
         int max = 0;
         for (int i=0; i<n; i++) {
             for (int j=0; j<n; j++) {
-                max = Int
+                max = Math.max(max, memo[i][j]);
             }
         }
+
+        System.out.print(max);
     }
 
     static int dfs(int r, int c) {
 
-        if(memo[r][c] > 0) {
+        if(memo[r][c] > 1) {
             return memo[r][c];
         }
 
@@ -50,11 +53,12 @@ public class Main {
             int nc = c + dc[dir];
 
             if(nr>=0 && nr<n && nc>=0 && nc<n) {
-                if (grid[r][c] < grid[nr][nc]) {
-                    return memo[nr][nc] = Math.max(memo[r][c]+1, memo[nr][nc]);
+                if (grid[r][c] > grid[nr][nc]) {
+                    return memo[r][c] = Math.max(memo[r][c], dfs(nr, nc) + 1);
                 }
             }
         }        
 
+        return memo[r][c];
     }
 }
