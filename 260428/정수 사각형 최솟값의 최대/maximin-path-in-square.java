@@ -25,16 +25,10 @@ public class Main {
 
         for (int i=2; i<=N; i++) {
             for (int j=2; j<=N; j++) {
-                dp[i][j] = Math.min(map[i][j], Math.min(dp[i-1][j], dp[i][j-1]));
+                dp[i][j] = Math.min(map[i][j], Math.max(dp[i-1][j], dp[i][j-1]));
             }
         }
 
-        int maxOfMin = Integer.MIN_VALUE;
-        for (int i=1; i<=N; i++) {
-            for (int j=1; j<=N; j++) {
-                maxOfMin = Math.max(maxOfMin, dp[i][j]);
-            }
-        } 
-        System.out.print(max);
+        System.out.print(dp[N][N]);
     }
 }
