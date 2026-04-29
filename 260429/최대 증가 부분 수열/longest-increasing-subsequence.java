@@ -15,7 +15,7 @@ public class Main {
         
         int[] dp = new int[N+1];
         dp[1] = 1;
-        int max = 0;
+        int max = 1;
 
         for (int i=1; i<=N; i++) {
             for (int j=1; j<i; j++) {
